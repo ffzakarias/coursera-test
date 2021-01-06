@@ -1,0 +1,118 @@
+/* Simple Responsive Framework.
+body {
+  
+  margin: 0;
+  padding: 0; 
+  font-family: "Comic Sans MS", cursive, sans-serif;*/
+*,
+*::before,
+*::after {  
+  box-sizing:border-box;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd{
+  margin:0;
+}
+
+h1 {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.h21 { 
+	position: absolute;
+	background-color: #FFB3E6;
+	right:0px;
+	top:0px;
+	border-bottom: 2px solid black;
+	border-left:2px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.h22 { 
+  position: absolute;
+  background-color: #D0563C;
+  color:white;
+  right:0px;
+  top:0px;
+  border-bottom: 2px solid black;
+  border-left:2px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.h23 { 
+  position: absolute;
+  background-color: #CDCB66;
+  right:0px;
+  top:0px;
+  border-bottom: 2px solid black;
+  border-left:2px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/*p{
+	width: 90%;
+	margin-right: auto;
+	margin-left:auto;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	text-align: justify;
+}*/
+.column {
+  float:left;
+  border: 2px solid black;
+  background-color:#D3D3D3;
+  position: relative;
+  padding-top:40px;
+  padding-bottom: 5px;
+  padding-left: 5px; padding-right: 5px;
+  text-align:justify;
+  margin: 1%;
+}
+
+/********** Desktop devices only **********/
+@media screen and (min-width: 992px) {
+  
+  .column {
+    width: 31.33%;
+  }
+  
+}
+
+/********** Tablet devices only **********/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .column{
+    width: 48%;
+  }
+  .column:last-child {
+    width: 98%;
+  }
+}
+/********** Mobile devices only **********/
+@media screen and (max-width: 767px) {
+  
+  .column {
+    width: 98%;
+  }
+}
